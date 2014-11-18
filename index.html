@@ -21,9 +21,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <!--   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
-    <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -33,15 +30,26 @@
 </head>
 
 <body>
-    <!-- <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div> -->
-    <div id="header" data-role="header" data-position="fixed" data-theme="b">
+
+   <!--  <div id="header" data-role="header" data-position="fixed" data-theme="b">
         <h1>Wed Up</h1>
+    </div> -->
+    <div class="ui-field-contain" data-role="controlgroup" data-type="horizontal"  data-theme="b" >
+        <select id="title-filter-menu" data-native-menu="false" class="filterable-select">
+            <option>Select Region</option>
+            <option value="orange">Bangalore</option>
+            <option value="apple">Hyderabad</option>
+            <option value="peach">Chennai</option>
+            <option value="lemon">Mysore</option>
+        </select>
+         
+         <select id="title-filter-menu1" data-native-menu="false">
+            <option>Select Price</option>
+            <option value="orange">Below 5000</option>
+            <option value="apple">5000-10000</option>
+            <option value="peach">10000-50000</option>
+            <option value="lemon">Above 50000</option>
+        </select>
     </div>
 
     <div id="content" data-role="content" data-theme="b">
@@ -50,14 +58,11 @@
     <div id="footer" data-role="footer" data-position="fixed" data-theme="b">
         <div data-role="navbar">
             <ul>
-                <li><a href="#" data-icon="home" data-theme="b">Home</a>
-                </li>
-                <li><a href="#" data-icon="user" data-theme="b">Forum</a>
-                </li>
-                <li><a href="#" data-icon="location" data-theme="b">Region</a>
-                </li>
-                <li><a href="#" data-icon="info" data-theme="b">About</a>
-                </li>
+                <li><a href="#" data-icon="user" data-theme="b">Forum</a></li>
+                <li><a href="#" data-icon="camera" data-theme="b">Photographers</a></li>
+                <li><a href="#" data-icon="home" data-theme="b">Wedding Halls</a></li>
+                <li><a href="#" data-icon="audio" data-theme="b">DJs</a></li>
+                <li><a href="#" data-icon="bars" data-theme="b">Settings</a></li>
             </ul>
         </div>
         <!-- /navbar -->
