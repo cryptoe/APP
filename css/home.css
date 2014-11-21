@@ -64,7 +64,7 @@ box-sizing: border-box;
     right: auto;
     left: 9px;
 }
-.ui-listview > li > a {
+#photographersList > li > a {
 
-    padding :0px;
+   padding :0px;
 }
