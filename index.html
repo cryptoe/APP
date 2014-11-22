@@ -32,12 +32,22 @@
 <body>
 
    <div data-role="page" id="home" data-theme="b">
-   <div id="selectField" data-role="header" data-position="fixed">  
-    <a href="#positionWindow" class="ui-btn ui-icon-location ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline" id="btn" data-rel="popup" data-position-to="window">Region</a>
+   <div id="selectField1" data-role="header" data-position="fixed">   
+   <div data-role="navbar"" style="margin:10px">
+   			<ul>
+                <li><a href="#" >Seg1</a></li>
+                <li><a href="#" class="ui-btn-active">Seg2</a></li>
+                <li><a href="#">Seg3</a></li>      
+                <li><a href="#">Seg4</a></li>                
+            </ul>
+     </div>   
+     <div data-role="header">    
+    <a href="#positionWindow" class="ui-btn-left ui-btn ui-icon-location ui-btn-icon-left ui-btn ui-corner-all ui-shadow ui-btn-inline" id="btn" data-rel="popup" data-position-to="window">Region</a>
      <h1>Photographers</h1>
-    <a href="#positionWindow" class="ui-btn ui-icon-location ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline"  data-rel="popup" data-position-to="window">Price</a>
-
+    <a href="#positionWindow" class="ui-btn-right ui-btn ui-icon-star ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline"  data-rel="popup" data-position-to="window">Price</a>
+   </div>
     </div>
+
     <div data-role="popup" id="positionWindow" data-theme="b">
       <ul data-role="listview" id="region">
         <li><a href="javascript:clicked('ALL')" data-rel="dialog">ALL</a></li>
@@ -53,27 +63,15 @@
   
     <div data-role="content" style="padding:0px">
        <ul data-role="listview" data-filter="true" data-inset="true" id="photographersList">
-       <li class="iconLeft" data-icon="arrow-l"><a href='#about' >    
-            <div style="display: inline-block; float: right;">
-          <img src='http://mashvichon.s3.amazonaws.com/logo/shirangranot/logot144x144.png' alt='Shiran Granot' style="width:100px;height:100px"/>
-          </div>
-              <div style="display: inline-block; float: right;">
-          <h2>Shiran Granot</h2>
-          <h2>5</h2>
-          </div>
-          
-          </a>
-        </li>
        </ul>
   </div>  
 
     <div id="footer"  data-role="footer" data-position="fixed" data-theme="b">
-        <div data-role="navbar" data-theme="b">
+        <div data-role="navbar">
             <ul>
-                <li><a href="#" data-icon="bars" class="li">Settings</a></li>
-                <li><a href="#" data-icon="camera" class="li">Photographers</a></li>
-                <li><a href="#" data-icon="user" class="li">Forum</a></li>
-                
+                <li><a href="#contactUS" data-icon="bars" >Settings</a></li>
+                <li><a href="#home" data-icon="camera" class="ui-btn-active">Photographers</a></li>
+                <li><a href="#" data-icon="user">Forum</a></li>                
             </ul>
         </div>
     </div>
@@ -87,16 +85,62 @@
         <a href="#home" data-icon="back" data-iconpos="notext"></a>
       </div>
 
-      <div id="footer"  class="test" data-role="footer" data-position="fixed">
+      <div id="footer" data-role="footer" data-position="fixed" data-theme="b">
               <div data-role="navbar">
                   <ul>
-                    <li><a href="#" data-icon="bars" class="li">Settings</a></li>
-                    <li><a href="#" data-icon="camera" class="li">Photographers</a></li>
-                    <li><a href="#" data-icon="user" class="li">Forum</a></li>
+                    <li><a href="#contactUS" data-icon="bars">Settings</a></li>
+                    <li><a href="#home" data-icon="camera">Photographers</a></li>
+                    <li><a href="#" data-icon="user">Forum</a></li>
                  </ul>
               </div>
           </div>
 </div>
+<div data-role="page" id="contactUS" data-theme="b">
+
+	<div data-role="header">
+		<h1>Contact Us</h1>
+		 <a href="#home" data-icon="back" data-iconpos="notext"></a>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	<div class="contact-thankyou" style="display: none;">
+			Thank you.  Your message has been sent.  We will get back to you as soon as we can.
+		</div>
+		<div class="contact-form">
+			
+			<div data-role="fieldcontain" class="text-field">
+				<label for="firstname">First Name*:</label>
+				<input type="text" name="firstname" value="" placeholder="" class="required" id="firstname" />
+			</div>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="surname">Last Name:</label>
+				<input type="text" name="surname" value="" placeholder="" id="surname" />
+			</div>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="email">Email Address*:</label>
+				<input type="email" name="email" value="" placeholder="" class="required" id="email"  />
+			</div>
+			<div data-role="fieldcontain" class="text-field">
+				<label for="mobilephone">Mobile Number:</label>
+				<input type="number" name="mobilephone" value="" placeholder="" id="mobilephone" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="message">Message*:</label>
+				<textarea name="message" id="message" placeholder="Enter your message here..." class="required"></textarea>
+			</div>
+			<div class="send"><a href="javascript:;" data-role="button" data-iconpos="right" id="send-feedback">Send Feedback</a></div>
+		</div><!-- //.contact-form -->
+	</div><!-- /content -->
+
+	 <div id="footer" data-role="footer" data-position="fixed" data-theme="b">
+              <div data-role="navbar">
+                  <ul>
+                    <li><a href="#contactUS" data-icon="bars" class="ui-btn-active">Settings</a></li>
+                    <li><a href="#home" data-icon="camera">Photographers</a></li>
+                    <li><a href="#" data-icon="user">Forum</a></li>
+                 </ul>
+              </div>
+          </div>
       <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script> 
     <script src="http://wedup.net/mobileApp/getImages.php"></script>
