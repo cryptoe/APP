@@ -100,6 +100,7 @@
 	<div data-role="header">
 		<h1>Contact Us</h1>
 		 <a href="#home" data-icon="back" data-iconpos="notext"></a>
+		 <a href="#" id="send-feedback" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-mail">Send</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -109,16 +110,20 @@
 		<div class="contact-form">
 			
 			<div data-role="fieldcontain" class="text-field">
-				<label for="firstname">First Name*:</label>
+				<label for="Name">First Name*:</label>
 				<input type="text" name="firstname" value="" placeholder="" class="required" id="firstname" />
 			</div>
-			<div data-role="fieldcontain" class="text-field">
+			<!--<div data-role="fieldcontain" class="text-field">
 				<label for="surname">Last Name:</label>
 				<input type="text" name="surname" value="" placeholder="" id="surname" />
 			</div>
-			<div data-role="fieldcontain" class="text-field">
+			 <div data-role="fieldcontain" class="text-field">
 				<label for="email">Email Address*:</label>
 				<input type="email" name="email" value="" placeholder="" class="required" id="email"  />
+			</div> -->
+			<div data-role="fieldcontain" class="text-field">
+				<label for="Address">Address*:</label>
+				<input type="text" name="address" value="" placeholder="" class="required" id="address" />
 			</div>
 			<div data-role="fieldcontain" class="text-field">
 				<label for="mobilephone">Mobile Number:</label>
@@ -126,9 +131,8 @@
 			</div>
 			<div data-role="fieldcontain">
 				<label for="message">Message*:</label>
-				<textarea name="message" id="message" placeholder="Enter your message here..." class="required"></textarea>
+				<textarea name="message" id="message" style:"height:100px" placeholder="Enter your message here..." class="required"></textarea>
 			</div>
-			<div class="send"><a href="javascript:;" data-role="button" data-iconpos="right" id="send-feedback">Send Feedback</a></div>
 		</div><!-- //.contact-form -->
 	</div><!-- /content -->
 
