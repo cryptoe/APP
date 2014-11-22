@@ -44,15 +44,19 @@ $( document ).ready(function() {
 	if (error > 0) {
 			alert('Please fill in all the mandatory fields. Mandatory fields are marked with an asterisk *.');	
 	} else {
-		var firstname = $contactform.find('input[name="firstname"]').val();
-		var surname = $contactform.find('input[name="surname"]').val();
-		var state = $contactform.find('select[name="state"]').val();
-		var mobilephone = $contactform.find('input[name="mobilephone"]').val();
-		var email = $contactform.find('input[name="email"]').val();	
-		var message = $contactform.find('textarea[name="message"]').val();	
+		//var firstname = $contactform.find('input[name="firstname"]').val();
+		var firstname = $('#firstname').val()
+		//var surname = $contactform.find('input[name="surname"]').val();
+		var address = $('#address').val();
+		var mobilephone = $('#mobilephone').val();
+		//var email = $contactform.find('input[name="email"]').val();	
+		var message = $('#message').val();	
 
+		var body = "First Name : "+firstname+"\n Address : "+address+"\n Contact No. : "+mobilephone+"\n Message : \n"+message;
+		alert(body);
+		window.open("mailto:amit.stiffy90@gmail.com?subject=The%20subject%20of%20the%20email&body="+body+"");
 		//submit the form
-		$.ajax({
+	/*	$.ajax({
 			type: "GET",
 			url: url,
 			data: {firstname:firstname, surname:surname, state: state, mobilephone: mobilephone, email: email, message: message},
@@ -65,7 +69,7 @@ $( document ).ready(function() {
 					alert('Unable to send your message. Please try again.');
 				}
 			}
-		}); //$.ajax
+		}); */
 
 	}
 	return false;
