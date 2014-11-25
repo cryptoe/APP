@@ -25,6 +25,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/home.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/home.css" />
     <title>Wed Up</title>
 </head>
@@ -33,45 +34,44 @@
 
    <div data-role="page" id="home" data-theme="b">
    <div id="selectField1" data-role="header" data-position="fixed">   
-   <div data-role="navbar"" style="margin:10px">
-   			<ul>
-                <li><a href="#" >Seg1</a></li>
-                <li><a href="#" class="ui-btn-active">Seg2</a></li>
-                <li><a href="#">Seg3</a></li>      
-                <li><a href="#">Seg4</a></li>                
+   <div data-role="navbar"" style="margin:10px" id="segment">
+   			<ul id="seg">
+   				<li value="5"><a href="#" value="5" style="border-bottom-left-radius: 5px;border-top-left-radius: 5px;height: 5px;background-color: #2E2E2E;" ><span style="position: relative;top: -3px;">Brides</span></a></li>
+                <li value="4"><a href="#" value="4" style="height: 5px;background-color: #2E2E2E;"><span style="position: relative;top: -3px;">Musics</span></a></li>      
+                <li value="3"><a href="#" value="3" style="height: 5px;background-color: #2E2E2E;"><span style="position: relative;top: -3px;">Photos</span></a></li>
+                <li value="2"><a href="#" value="2" style="border-bottom-right-radius: 5px;border-top-right-radius: 5px;height: 5px;background-color: #2E2E2E;"class="ui-btn-active" ><span style="position: relative;top: -3px;">Places</span></a></li>
+                
+                
+                                
             </ul>
      </div>   
-     <div data-role="header">    
-    <a href="#positionWindow" class="ui-btn-left ui-btn ui-icon-location ui-btn-icon-left ui-btn ui-corner-all ui-shadow ui-btn-inline" id="btn" data-rel="popup" data-position-to="window">Region</a>
-     <h1>Photographers</h1>
-    <a href="#positionWindow" class="ui-btn-right ui-btn ui-icon-star ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline"  data-rel="popup" data-position-to="window">Price</a>
+     <div data-role="header" style="padding-bottom: 10px;">    
+    <a href="#regionWindow" style="margin-left:20px;height: 10px;" class="ui-btn-left ui-btn ui-icon-location ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline" id="regionBtn" data-rel="popup" data-position-to="window"><span style="position: relative;top: -3px;">Region</span></a>
+     <h1></h1>
+    <a href="#subCategoryWindow" style="margin-right:20px;height: 10px;" class="ui-btn-right ui-btn ui-icon-bullets ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline" id="subCategoryBtn" data-rel="popup" data-position-to="window"><span style="position: relative;top: -3px;">Sub-Category</span></a>
    </div>
     </div>
 
-    <div data-role="popup" id="positionWindow" data-theme="b">
+    <div data-role="popup" id="regionWindow" data-theme="b">
       <ul data-role="listview" id="region">
-        <li><a href="javascript:clicked('ALL')" data-rel="dialog">ALL</a></li>
-        <li><a href="javascript:clicked('Bangalore')" data-rel="dialog">Bangalore</a></li>
-        <li><a href="javascript:clicked('Hyderabad')" data-rel="dialog">Hyderabad</a></li>
-        <li><a href="javascript:clicked('Mysore')" data-rel="dialog">Mysore</a></li>
-        <li><a href="javascript:clicked('Goa')" data-rel="dialog">Goa</a></li>
-        <li><a href="javascript:clicked('Ranchi')" data-rel="dialog">Ranchi</a></li>
-        <li><a href="javascript:clicked('Pune')" data-rel="dialog">Pune</a></li>
-      </ul>
+      </ul> 
     </div>
+  <div data-role="popup" id="subCategoryWindow" data-theme="b">
+      <ul data-role="listview" id="subCategory">
+      </ul>
+   </div>
   
-  
-    <div data-role="content" style="padding:0px">
+    <div data-role="content" style="padding:0px;background-color: #353535;">
        <ul data-role="listview" data-filter="true" data-inset="true" id="photographersList">
        </ul>
   </div>  
 
-    <div id="footer"  data-role="footer" data-position="fixed" data-theme="b">
+    <div id="footer"  data-role="footer" data-position="fixed" >
         <div data-role="navbar">
             <ul>
-                <li><a href="#contactUS" data-icon="bars" >Settings</a></li>
-                <li><a href="#home" data-icon="camera" class="ui-btn-active">Photographers</a></li>
-                <li><a href="#" data-icon="user">Forum</a></li>                
+                <li><a href="#contactUS" style="background-color:#1D1D1D" data-icon="gear" >Settings</a></li>
+                <li><a href="#home" style="background-color:#1D1D1D" data-icon="grid" class="ui-btn-active">Suppliers</a></li>
+                <li><a href="#forum" style="background-color:#1D1D1D" data-icon="user">Forum</a></li>                
             </ul>
         </div>
     </div>
@@ -85,15 +85,15 @@
         <a href="#home" data-icon="back" data-iconpos="notext"></a>
       </div>
 
-      <div id="footer" data-role="footer" data-position="fixed" data-theme="b">
-              <div data-role="navbar">
-                  <ul>
-                    <li><a href="#contactUS" data-icon="bars">Settings</a></li>
-                    <li><a href="#home" data-icon="camera">Photographers</a></li>
-                    <li><a href="#" data-icon="user">Forum</a></li>
-                 </ul>
-              </div>
-          </div>
+ <div id="footer"  data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#contactUS" data-icon="gear" >Settings</a></li>
+                <li><a href="#home" data-icon="grid">Suppliers</a></li>
+                <li><a href="#forum" data-icon="user">Forum</a></li>                
+            </ul>
+        </div>
+    </div>
 </div>
 <div data-role="page" id="contactUS" data-theme="b">
 
@@ -136,18 +136,35 @@
 		</div><!-- //.contact-form -->
 	</div><!-- /content -->
 
-	 <div id="footer" data-role="footer" data-position="fixed" data-theme="b">
-              <div data-role="navbar">
-                  <ul>
-                    <li><a href="#contactUS" data-icon="bars" class="ui-btn-active">Settings</a></li>
-                    <li><a href="#home" data-icon="camera">Photographers</a></li>
-                    <li><a href="#" data-icon="user">Forum</a></li>
-                 </ul>
-              </div>
+ <div id="footer"  data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#contactUS" data-icon="gear" class="ui-btn-active">Settings</a></li>
+                <li><a href="#home" data-icon="grid">Suppliers</a></li>
+                <li><a href="#forum" data-icon="user">Forum</a></li>                
+            </ul>
+        </div>
+    </div>
           </div>
+ <div data-role="page" id="forum" data-theme="b">
+ 
+    <div data-role="content" id="forum_content">
+      <!-- <iframe src="http://localhost/forum/Script//index.php?tab1=custom_timeline&id=test1" /> -->
+    </div>
+    <div id="footer"  data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#contactUS" data-icon="gear" >Settings</a></li>
+                <li><a href="#home" data-icon="grid">Suppliers</a></li>
+                <li><a href="#forum" data-icon="user" class="ui-btn-active">Forum</a></li>                
+            </ul>
+        </div>
+    </div>
+  </div><!-- content:forum -->
+
       <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script> 
-    <script src="http://wedup.net/mobileApp/getImages.php"></script>
+    <script src="http://wedup.net/mobileapp/getClientsAll.php"></script>
 </body>
 
 </html>
