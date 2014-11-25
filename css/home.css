@@ -51,10 +51,9 @@ box-sizing: border-box;
 {
    background : #252525 !important; 
 }
-#positionWindow-popup{
+#regionWindow-popup,#subCategoryWindow-popup{
     left: 10px !important ;
-    right: 10px !important;
-    
+    right: 10px !important;   
 }
 .iconLeft a{
     padding-left: 2.5em !important;
@@ -67,4 +66,20 @@ box-sizing: border-box;
 #photographersList > li > a {
 
    padding :0px;
+}
+#segment .ui-link{
+    border: 1px solid  #AD3C42 !important;
+    color: #AD3C42;
+}
+#segment .ui-btn-active{
+    background-color: #AD3C42 !important;
+     color:#FFFFFF;
+     border-color: #AD3C42 !important;
+    text-shadow:#AD3C42 !important;
+}
+#footer .ui-btn-active{
+    background-color: #AD3C42 !important;
+    border-color: #AD3C42 !important;
+     color:#FFFFFF;
+    text-shadow:#AD3C42 !important;
 }
