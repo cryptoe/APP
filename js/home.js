@@ -11,22 +11,22 @@ $( document ).ready(function() {
     $("#region").change(function () {
         
         alert("sssss");
-       $.mobile.loading( "show", {
-            text: "",
-            textVisible: false,
-            theme: "z",
-            html: ""
-        });
+       // $.mobile.loading( "show", {
+       //      text: "",
+       //      textVisible: false,
+       //      theme: "z",
+       //      html: ""
+       //  });
           filterData($("#title-filter-menu").val(),$("#title-filter-menu1").val());
     }); 
 
    $("#title-filter-menu1").change(function () {
-       $.mobile.loading( "show", {
-            text: "",
-            textVisible: false,
-            theme: "z",
-            html: ""
-        });
+       // $.mobile.loading( "show", {
+       //      text: "",
+       //      textVisible: false,
+       //      theme: "z",
+       //      html: ""
+       //  });
        filterData($("#title-filter-menu").val(),$("#title-filter-menu1").val());
     }); 
 
@@ -73,6 +73,10 @@ $( document ).ready(function() {
 
 	}
 	return false;
+    });
+$('a[href="#forum"').on('click',function(){
+  
+   $('#forum_content').load('http://forum-hatunot.com/forum-custom/script/index.php?tab1=custom_timeline&id=wedAppForumTest');
     });
 });
 function filterData(regionData,priceData)
@@ -134,14 +138,14 @@ function addElement(divId, divString) {
 }
 
 function setClient(data, t, p) {
-    console.log(data);
+    // console.log(data);
     var divElement = "";
-     $.mobile.loading( "show", {
-            text: "",
-            textVisible: false,
-            theme: "z",
-            html: ""
-        });
+     // $.mobile.loading( "show", {
+     //        text: "",
+     //        textVisible: false,
+     //        theme: "z",
+     //        html: ""
+     //    });
     for (var i = 0; i < data.length; i++) {
         jsonData = data;
         var name = data[i]['name'];
@@ -155,7 +159,7 @@ function setClient(data, t, p) {
      //   divElement = divElement + "<a href='#about'><div style=\"width:100px;height:100px;border:1px solid black;background:url('"+logo+"');\"></div></a>";
          divElement = divElement + " <li class=\"iconLeft\" data-icon=\"arrow-l\"><a href='#about'><div style=\"display: inline-block; float: right;\"><img src=\'" + logo + "\' style=\"width:100px;height:100px\"/></div><div style=\"display: inline-block; float: right; padding-right: 10px;\"><h1>"+name+"</h1><h2 align=\"right\">"+price+"</h2></div></a></li>"
     }
-    console.log(divElement);
+    // console.log(divElement);
     addElement('photographersList', divElement);
     // outputs 'Foo'
 }
