@@ -103,7 +103,7 @@ $( document ).ready(function() {
 							var logo = jsonData[i]['logo'];
 							var phone = jsonData[i]['phone'];
 							var address = jsonData[i]['address'];
-							divElement = divElement + " <li id="+id+" style=\"margin:5px\" class=\"iconLeft\" data-icon=\"arrow-l\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-icon-arrow-l\"style=\"margin:15px;background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
+							divElement = divElement + " <li id="+id+" style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
 
 						}
 					}
@@ -147,7 +147,7 @@ function filterData(regionID,subCategID)
 								var logo = jsonData[i]['logo'];
 								var phone = jsonData[i]['phone'];
 								var address = jsonData[i]['address'];
-								divElement = divElement + " <li id="+id+" style=\"margin:5px\" class=\"iconLeft\" data-icon=\"arrow-l\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-icon-arrow-l\"style=\"margin:15px;background: #222528;\"><div style=\"display: inline-block; float: right;\"><img src=\'" + logo + "\' style=\"width:80px;height:80px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
+								divElement = divElement + " <li id="+id+" style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
 							}
 							else
 							{
@@ -159,7 +159,7 @@ function filterData(regionID,subCategID)
 									var logo = jsonData[i]['logo'];
 									var phone = jsonData[i]['phone'];
 									var address = jsonData[i]['address'];
-									divElement = divElement + " <li id="+id+" style=\"margin:5px\" class=\"iconLeft\" data-icon=\"arrow-l\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-icon-arrow-l\"style=\"margin:15px;background: #222528;\"><div style=\"display: inline-block; float: right;\"><img src=\'" + logo + "\' style=\"width:80px;height:80px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
+									divElement = divElement + " <li id="+id+" style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
 
 								}
 							}
@@ -182,7 +182,7 @@ function filterData(regionID,subCategID)
 								var logo = jsonData[i]['logo'];
 								var phone = jsonData[i]['phone'];
 								var address = jsonData[i]['address'];
-								divElement = divElement + " <li id="+id+" style=\"margin:5px\" class=\"iconLeft\" data-icon=\"arrow-l\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-icon-arrow-l\"style=\"margin:15px;background: #222528;\"><div style=\"display: inline-block; float: right;\"><img src=\'" + logo + "\' style=\"width:80px;height:80px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
+								divElement = divElement + " <li id="+id+" style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
 							}
 							else
 							{
@@ -194,7 +194,7 @@ function filterData(regionID,subCategID)
 									var logo = jsonData[i]['logo'];
 									var phone = jsonData[i]['phone'];
 									var address = jsonData[i]['address'];
-									divElement = divElement + " <li id="+id+" style=\"margin:5px\" class=\"iconLeft\" data-icon=\"arrow-l\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-icon-arrow-l\"style=\"margin:15px;background: #222528;\"><div style=\"display: inline-block; float: right;\"><img src=\'" + logo + "\' style=\"width:80px;height:80px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
+									divElement = divElement + " <li id="+id+" style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
 
 								}
 							}
