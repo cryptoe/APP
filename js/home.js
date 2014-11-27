@@ -65,14 +65,14 @@ $( document ).ready(function() {
 	$("#seg").on("click", ">li", function(){
 		var catID = $(this).attr('value');
 		$('#subCategory').empty();
-		 $('#subCategory').append($("<li id=0>").append("<a href=\"javascript:subCategoryClicked('ALL')\" data-rel=\"dialog\"  class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">ALL</a>"));
+		 $('#subCategory').append($("<li id=0>").append("<a href=\"javascript:subCategoryClicked('ALL')\" data-rel=\"dialog\"  class=\"ui-btn ui-btn-icon-right ui-icon-carat-l\">ALL</a>"));
 		for(var i = 0;i<subCategoryData.length;i++)
 		{
 			if(subCategoryData[i]['typeid'] == catID)
 			{
 				var name = subCategoryData[i]['name'];
 				var id = subCategoryData[i]['id'];
-				$('#subCategory').append($("<li id="+id+">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"+name+"</a>"));
+				$('#subCategory').append($("<li id="+id+" class=\"iconLeft\">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-l\">"+name+"</a>"));
 			}
 			/*else if(catID == 1)
 			{
@@ -233,15 +233,15 @@ function setClientsDet(data, regionJson, subCategoryJson) {
 					}
 				}
 			}
-    $('#region').append($("<li id=0>").append("<a href=\"javascript:regionClicked('ALL')\" data-rel=\"dialog\">ALL</a>"));
+    $('#region').append($("<li id=0 class=\"iconLeft\" >").append("<a href=\"javascript:regionClicked('ALL')\" class=\"ui-nodisc-icon ui-icon-carat-l \" data-rel=\"dialog\"><span style=\"float:right\">ALL</span></a>"));
     for(var i=0;i<regionJson.length;i++)
     {
     	regionData = regionJson;
     	var name = regionJson[i]['name'];
     	var id = regionJson[i]['id'];
-    	$('#region').append($("<li id="+id+">").append("<a href=\"javascript:regionClicked('"+name+"')\" data-rel=\"dialog\">"+name+"</a>"));
+    	$('#region').append($("<li id="+id+" class=\"iconLeft\">").append("<a href=\"javascript:regionClicked('"+name+"')\" class=\"ui-nodisc-icon ui-icon-carat-l \" data-rel=\"dialog\"><span style=\"float:right\">"+name+"</span></a>"));
     }
-    $('#subCategory').append($("<li id=0>").append("<a href=\"javascript:subCategoryClicked('ALL')\" data-rel=\"dialog\">ALL</a>"));
+    $('#subCategory').append($("<li id=0 class=\"iconLeft\">").append("<a href=\"javascript:subCategoryClicked('ALL')\" class=\"ui-nodisc-icon ui-icon-carat-l \" data-rel=\"dialog\"><span style=\"float:right\">ALL</span></a>"));
     for(var i=0;i<subCategoryJson.length;i++)
     {
     	subCategoryData = subCategoryJson;
@@ -249,7 +249,7 @@ function setClientsDet(data, regionJson, subCategoryJson) {
     	var catid = subCategoryJson[i]['typeid'];
     	var id = subCategoryJson[i]['id'];
     	if(catid == 2)
-    		$('#subCategory').append($("<li id="+id+">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\">"+name+"</a>"));
+    		$('#subCategory').append($("<li id="+id+" class=\"iconLeft\">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" class=\"ui-nodisc-icon ui-icon-carat-l\" data-rel=\"dialog\"><span style=\"float:right\">"+name+"</span></a>"));
     }
 
     addElement('photographersList', divElement);
