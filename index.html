@@ -21,26 +21,27 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/home.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/home.css" />
     <title>Wed Up</title>
 </head>
 
+
 <body>
-					<!--
-					**********************************************
-					******************  HomePage *****************
-					**********************************************
-					-->
+          <!--
+          **********************************************
+          ******************  HomePage *****************
+          **********************************************
+          -->
    <div data-role="page" id="home" data-theme="b">
    <div id="selectField1" data-role="header" data-position="fixed">   
-   <div data-role="navbar"" style="margin:10px" id="segment">
-   			<ul id="seg">
-   				<li value="5"><a href="#" value="5" style="border-bottom-left-radius: 5px;border-top-left-radius: 5px;height: 5px;background-color: #2E2E2E;" ><span style="position: relative;top: -3px;">Brides</span></a></li>
+   <div data-role="navbar" style="margin:10px" id="segment">
+        <ul id="seg">
+          <li value="5"><a href="#" value="5" style="border-bottom-left-radius: 5px;border-top-left-radius: 5px;height: 5px;background-color: #2E2E2E;" ><span style="position: relative;top: -3px;">Brides</span></a></li>
                 <li value="4"><a href="#" value="4" style="height: 5px;background-color: #2E2E2E;"><span style="position: relative;top: -3px;">Musics</span></a></li>      
                 <li value="3"><a href="#" value="3" style="height: 5px;background-color: #2E2E2E;"><span style="position: relative;top: -3px;">Photos</span></a></li>
                 <li value="2"><a href="#" value="2" style="border-bottom-right-radius: 5px;border-top-right-radius: 5px;height: 5px;background-color: #2E2E2E;"class="ui-btn-active" ><span style="position: relative;top: -3px;">Places</span></a></li>                                                        
@@ -52,7 +53,6 @@
     <a href="#subCategoryWindow" style="margin-right:20px;height: 10px;" class="ui-btn-right ui-btn ui-icon-bullets ui-btn-icon-right ui-btn ui-corner-all ui-shadow ui-btn-inline" id="subCategoryBtn" data-rel="popup" data-position-to="window"><span style="position: relative;top: -3px;">Sub-Category</span></a>
    </div>
     </div>
-
     <div data-role="popup" id="regionWindow" data-theme="b">
       <ul data-role="listview" id="region">
       </ul> 
@@ -66,7 +66,6 @@
        <ul data-role="listview" data-filter="true" data-inset="true" id="photographersList">
        </ul>
   </div>  
-
     <div id="footer"  data-role="footer" data-position="fixed" >
         <div data-role="navbar">
             <ul>
@@ -78,19 +77,16 @@
     </div>
     <!-- /footer -->
 </div>
-
-						<!--
-							**********************************************
-							******************  About Suppliers **********
-							**********************************************
-						-->
+            <!--
+              **********************************************
+              ******************  About Suppliers **********
+              **********************************************
+            -->
 <div id="about" data-role="page" data-theme="b">
-
     <div data-role="header" id="header" data-position="fixed">
         <h1>Photographer Name</h1>
         <a href="#home" data-icon="back" data-iconpos="notext"></a>
       </div>
-
  <div id="footer"  data-role="footer" data-position="fixed" >
         <div data-role="navbar">
             <ul>
@@ -101,53 +97,49 @@
         </div>
     </div>
 </div>
-
-								<!--
-								**********************************************
-								******************  Contact-Us ***************
-								**********************************************
-								-->
+                <!--
+                **********************************************
+                ******************  Contact-Us ***************
+                **********************************************
+                -->
 <div data-role="page" id="contactUS" data-theme="b">
-
-	<div data-role="header">
-		<h1>Contact Us</h1>
-		 <a href="#home" data-icon="back" data-iconpos="notext"></a>
-		 <a href="#" id="send-feedback" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-mail">Send</a>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-	<div class="contact-thankyou" style="display: none;">
-			Thank you.  Your message has been sent.  We will get back to you as soon as we can.
-		</div>
-		<div class="contact-form">
-			
-			<div data-role="fieldcontain" class="text-field">
-				<label for="Name">First Name*:</label>
-				<input type="text" name="firstname" value="" placeholder="" class="required" id="firstname" />
-			</div>
-			<!--<div data-role="fieldcontain" class="text-field">
-				<label for="surname">Last Name:</label>
-				<input type="text" name="surname" value="" placeholder="" id="surname" />
-			</div>
-			 <div data-role="fieldcontain" class="text-field">
-				<label for="email">Email Address*:</label>
-				<input type="email" name="email" value="" placeholder="" class="required" id="email"  />
-			</div> -->
-			<div data-role="fieldcontain" class="text-field">
-				<label for="Address">Address*:</label>
-				<input type="text" name="address" value="" placeholder="" class="required" id="address" />
-			</div>
-			<div data-role="fieldcontain" class="text-field">
-				<label for="mobilephone">Mobile Number:</label>
-				<input type="number" name="mobilephone" value="" placeholder="" id="mobilephone" />
-			</div>
-			<div data-role="fieldcontain">
-				<label for="message">Message*:</label>
-				<textarea name="message" id="message" style:"height:100px" placeholder="Enter your message here..." class="required"></textarea>
-			</div>
-		</div><!-- //.contact-form -->
-	</div><!-- /content -->
-
+  <div data-role="header">
+    <h1>Contact Us</h1>
+     <a href="#home" data-icon="back" data-iconpos="notext"></a>
+     <a href="#" id="send-feedback" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-mail">Send</a>
+  </div><!-- /header -->
+  <div data-role="content"> 
+  <div class="contact-thankyou" style="display: none;">
+      Thank you.  Your message has been sent.  We will get back to you as soon as we can.
+    </div>
+    <div class="contact-form">
+      
+      <div data-role="fieldcontain" class="text-field">
+        <label for="Name">First Name*:</label>
+        <input type="text" name="firstname" value="" placeholder="" class="required" id="firstname" />
+      </div>
+      <!--<div data-role="fieldcontain" class="text-field">
+        <label for="surname">Last Name:</label>
+        <input type="text" name="surname" value="" placeholder="" id="surname" />
+      </div>
+       <div data-role="fieldcontain" class="text-field">
+        <label for="email">Email Address*:</label>
+        <input type="email" name="email" value="" placeholder="" class="required" id="email"  />
+      </div> -->
+      <div data-role="fieldcontain" class="text-field">
+        <label for="Address">Address*:</label>
+        <input type="text" name="address" value="" placeholder="" class="required" id="address" />
+      </div>
+      <div data-role="fieldcontain" class="text-field">
+        <label for="mobilephone">Mobile Number:</label>
+        <input type="number" name="mobilephone" value="" placeholder="" id="mobilephone" />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="message">Message*:</label>
+        <textarea name="message" id="message" style:"height:100px" placeholder="Enter your message here..." class="required"></textarea>
+      </div>
+    </div><!-- //.contact-form -->
+  </div><!-- /content -->
  <div id="footer"  data-role="footer" data-position="fixed" >
         <div data-role="navbar">
             <ul>
@@ -159,11 +151,11 @@
     </div>
           </div>
           
-								<!--
-								**********************************************
-								******************  Forum ********************
-								**********************************************
-								-->
+                <!--
+                **********************************************
+                ******************  Forum ********************
+                **********************************************
+                -->
  <div data-role="page" id="forum" data-theme="b">
  
     <div data-role="content" id="forum_content">
@@ -179,10 +171,9 @@
         </div>
     </div>
   </div><!-- content:forum -->
-	 <script src="http://wedup.net/mobileapp/getClientsAll.php"></script>
+   <script src="http://wedup.net/mobileapp/getClientsAll.php"></script>
       <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script> 
    
 </body>
-
 </html>

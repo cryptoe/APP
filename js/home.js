@@ -120,6 +120,31 @@ $( document ).ready(function() {
 		filterData(selectedRegionID,$(this).attr('id'));
 		selectedSubCategoryID = $(this).attr('id');
 	});
+$("#video").on("click", function(){
+	$("#video-gallery-1").removeClass("display-call");
+	$("#photographer-info-slide").removeClass("display-call");
+	$("#photographer-info-slide").addClass("display-call");
+$("#photogallery-div").removeClass("display-call");
+	$("#photogallery-div").addClass("display-call");
+	});
+$("#gallery").on("click", function(){
+	$("#video-gallery-1").removeClass("display-call");
+	$("#video-gallery-1").addClass("display-call");
+	$("#photographer-info-slide").removeClass("display-call");
+	$("#photographer-info-slide").addClass("display-call");
+	$("#photogallery-div").removeClass("display-call");
+	});
+
+$("#about").on("click", function(){
+	$("#video-gallery-1").removeClass("display-call");
+	$("#video-gallery-1").addClass("display-call");
+	$("#photographer-info-slide").removeClass("display-call");
+	$("#photogallery-div").removeClass("display-call");
+	$("#photogallery-div").addClass("display-call");
+	});
+
+
+
 });
 
 function filterData(regionID,subCategID)
