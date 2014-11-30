@@ -74,10 +74,96 @@ $( document ).ready(function() {
 	}
 	return false;
     });
-$('a[href="#forum"').on('click',function(){
-  
-   $('#forum_content').load('http://forum-hatunot.com/forum-custom/script/index.php?tab1=custom_timeline&id=wedAppForumTest');
-    });
+
+	$("#seg").on("click", ">li", function(){
+		var catID = $(this).attr('value');
+		$('#subCategory').empty();
+		 $('#subCategory').append($("<li id=0>").append("<a href=\"javascript:subCategoryClicked('ALL')\" data-rel=\"dialog\"  class=\"ui-btn ui-btn-icon-right ui-icon-carat-l\">ALL</a>"));
+		for(var i = 0;i<subCategoryData.length;i++)
+		{
+			if(subCategoryData[i]['typeid'] == catID)
+			{
+				var name = subCategoryData[i]['name'];
+				var id = subCategoryData[i]['id'];
+				$('#subCategory').append($("<li id="+id+" class=\"iconLeft\">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-l\">"+name+"</a>"));
+			}
+			/*else if(catID == 1)
+			{
+				var name = subCategoryData[i]['name'];
+				var id = subCategoryData[i]['id'];
+				$('#subCategory').append($("<li id="+id+">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"+name+"</a>"));
+			}*/
+		}
+		var ni = document.getElementById("regionBtn");
+   			 ni.innerHTML = "Region";
+		 ni = document.getElementById("subCategoryBtn");
+   			 ni.innerHTML = "Sub-Category";
+   			 selectedRegionID = 0;
+   			 selectedSubCategoryID = 0;
+   			 divElement = "";
+   			 
+ 			for(var i = 0;i<subCategoryData.length;i++)
+			{
+				if(subCategoryData[i]['typeid'] == catID)
+				{
+					var subID  = subCategoryData[i]['id'];
+					for (var i = 0; i < jsonData.length; i++) {
+						var subId = jsonData[i]['subTypeID'];
+						if(subID == subId)
+						{
+							var id = jsonData[i]['id'];
+							var name = jsonData[i]['name'];
+							var logo = jsonData[i]['logo'];
+							var phone = jsonData[i]['phone'];
+							var address = jsonData[i]['address'];
+							divElement = divElement + " <li id="+id+" style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">"+name+"</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">"+address+"</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">"+phone+"</h2></div></a></li>";
+
+						}
+					}
+				}
+			}
+   		 addElement('photographersList', divElement);
+	});
+
+	$("#region").on("click", ">li", function(){
+		filterData($(this).attr('id'),selectedSubCategoryID);
+		selectedRegionID = $(this).attr('id');
+	});
+	$("#subCategory").on("click", ">li", function(){
+		filterData(selectedRegionID,$(this).attr('id'));
+		selectedSubCategoryID = $(this).attr('id');
+	});
+	
+	/**
+	 * Event handlers for forum code.
+	 */
+	$('a[href="#forum"]').on('click',function(){
+		   var forumUrl="http://forum-hatunot.com/forum-custom/script/index.php?tab1=custom_timeline&id=wedAppForumTest";
+		   var forumDiv = $('#forum_content');
+		   if(forumDiv.html().trim() === ""){
+			   $('#forum_content').load(forumUrl, function(){
+				   $(".header-join-wrapper").on('click',function(){
+					   var url = $('.header-join-wrapper').attr('href');
+					   $('.header-join-wrapper').attr('href', "");
+					   var ref = window.open(url, '_blank','location=no');
+					   ref.addEventListener('loadstop', function(event) { 
+						   var success = "http://forum-hatunot.com/forum-custom/Script//index.php?tab1=home#_=_";
+					       if (event.url === success){
+					           ref.close();
+					           $('#forum_content').load(forumUrl);
+					       }
+					   });
+				   })
+			   });			   
+		   }
+		   
+	});
+//	$('.header-join-wrapper').on('click', function(){
+//		openFB.init({appId:716728658405527,tokenStore:window.localStorage});
+////		openFB.init('YOUR_FB_APP_ID', 'http://localhost/openfb/oauthcallback.html', window.localStorage);
+//		openFB.login();
+//	});
+	
 });
 function filterData(regionData,priceData)
 {
@@ -245,4 +331,6 @@ $.mobile.document
    
 
 })( jQuery );
+
+
  
