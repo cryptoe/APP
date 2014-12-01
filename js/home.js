@@ -15,7 +15,30 @@ function subCategoryClicked(val)
     ni.innerHTML = val;
     $( "#subCategoryWindow" ).popup( "close" );
 }
+}
 $( document ).ready(function() {  
+
+    $("#region").change(function () {
+        
+        alert("sssss");
+       // $.mobile.loading( "show", {
+       //      text: "",
+       //      textVisible: false,
+       //      theme: "z",
+       //      html: ""
+       //  });
+          filterData($("#title-filter-menu").val(),$("#title-filter-menu1").val());
+    }); 
+
+   $("#title-filter-menu1").change(function () {
+       // $.mobile.loading( "show", {
+       //      text: "",
+       //      textVisible: false,
+       //      theme: "z",
+       //      html: ""
+       //  });
+       filterData($("#title-filter-menu").val(),$("#title-filter-menu1").val());
+    }); 
 
     //Contact Us
     $('#send-feedback').click(function() {
@@ -142,11 +165,38 @@ $("#about").on("click", function(){
 	$("#photogallery-div").removeClass("display-call");
 	$("#photogallery-div").addClass("display-call");
 	});
-
-
-
+	
+	/**
+	 * Event handlers for forum code.
+	 */
+	$('a[href="#forum"]').on('click',function(){
+		   var forumUrl="http://forum-hatunot.com/forum-custom/script/index.php?tab1=custom_timeline&id=wedAppForumTest";
+		   var forumDiv = $('#forum_content');
+		   if(forumDiv.html().trim() === ""){
+			   $('#forum_content').load(forumUrl, function(){
+				   $(".header-join-wrapper").on('click',function(){
+					   var url = $('.header-join-wrapper').attr('href');
+					   $('.header-join-wrapper').attr('href', "");
+					   var ref = window.open(url, '_blank','location=no');
+					   ref.addEventListener('loadstop', function(event) { 
+						   var success = "http://forum-hatunot.com/forum-custom/Script//index.php?tab1=home#_=_";
+					       if (event.url === success){
+					           ref.close();
+					           $('#forum_content').load(forumUrl);
+					       }
+					   });
+				   })
+			   });			   
+		   }
+		   
+	});
+//	$('.header-join-wrapper').on('click', function(){
+//		openFB.init({appId:716728658405527,tokenStore:window.localStorage});
+////		openFB.init('YOUR_FB_APP_ID', 'http://localhost/openfb/oauthcallback.html', window.localStorage);
+//		openFB.login();
+//	});
+	
 });
-
 function filterData(regionID,subCategID)
 {
       var divElement = "";
@@ -276,8 +326,9 @@ function setClientsDet(data, regionJson, subCategoryJson) {
     	if(catid == 2)
     		$('#subCategory').append($("<li id="+id+" class=\"iconLeft\">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" class=\"ui-nodisc-icon ui-icon-carat-l\" data-rel=\"dialog\"><span style=\"float:right\">"+name+"</span></a>"));
     }
-
+    // console.log(divElement);
     addElement('photographersList', divElement);
+    // outputs 'Foo'
 }
 
 //For Region and Price Select menu
@@ -361,4 +412,3 @@ $.mobile.document
    
 
 })( jQuery );
- 
