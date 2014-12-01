@@ -63,9 +63,17 @@ box-sizing: border-box;
     right: auto;
     left: 9px;
 }
+.iconright ul{
+    padding-right: 2.5em !important;
+    padding-left: 1em !important;
+}
+.iconright ul:after{
+    left: auto;
+    right: 9px;
+}
 #photographersList > li > a {
 
-   padding :0px;
+   padding :0px !important;
 }
 #segment .ui-link{
     border: 1px solid  #AD3C42 !important;
@@ -87,4 +95,11 @@ box-sizing: border-box;
 {
     position: relative;
     padding-right: 10px;
+}
+.ui-input-search input{
+    text-align: right;
+}
+.ui-input-search:after{
+
+   left: 93%;
 }
