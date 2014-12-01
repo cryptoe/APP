@@ -15,7 +15,7 @@ function subCategoryClicked(val)
     ni.innerHTML = val;
     $( "#subCategoryWindow" ).popup( "close" );
 }
-}
+
 $( document ).ready(function() {  
 
     $("#region").change(function () {
