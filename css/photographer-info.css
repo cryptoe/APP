@@ -1,116 +1,95 @@
 .photographer-header {
-
-background-color:#252525;
+    background-color: #252525;
 }
-
-
-#photographer-info-nav-bar .ui-link{
-    border: 1px solid  #FFFFFF !important;
-    color: #FFFFFF ;
-    text-shadow: 0px 0px 0px #FFFFFF  !important;
+#photographer-info-nav-bar .ui-link {
+    border: 1px solid #FFFFFF !important;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 0px #FFFFFF !important;
 }
-.photographer-head
-{
-background: url(../img/profile-header-img1.png) no-repeat;
-height: 165px;
-background-size:cover;
-background-position:center center;
-position: relative; 
-width: 100%; 
-/* background-position: center; */
+.photographer-head {
+    background: url(../img/profile-header-img1.png) no-repeat;
+    height: 165px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    width: 100%;
+    /* background-position: center; */
 }
-
-.photographer-circle-black
-{
-background-color: black;
-height: 69px;
-width: 69px;
-border: 2px solid white;
-position: relative;
-/* position: absolute; */
-margin: 0 auto;
-border-radius: 6em;
-/* border-color: white; */
-/* border: 1px solid #FFFFFF; */
+.photographer-circle-black {
+    background-color: black;
+    height: 69px;
+    width: 69px;
+    border: 2px solid white;
+    position: relative;
+    /* position: absolute; */
+    
+    margin: 0 auto;
+    border-radius: 6em;
+    /* border-color: white; */
+    /* border: 1px solid #FFFFFF; */
 }
-
-.photographer-circle-text
-{
-position: relative;
-margin: auto;
-padding-top: 24px;
+.photographer-circle-text {
+    position: relative;
+    margin: auto;
+    padding-top: 24px;
 }
-
-.allign-middle
-{
-	text-align: center;
-vertical-align: middle;
+.allign-middle {
+    text-align: center;
+    vertical-align: middle;
 }
-
-.photographer-call
-{
-background-color: #3CAC5A !important;
-border: 2px solid #FFF !important;
-padding-left: 0em;
-padding-right: 3em;
-padding-bottom: 1em;
-margin-left: 2em;
-width: 80%;
-display: block;
-height: 1.5em;
-margin-bottom: 2em;
+.photographer-call {
+    background-color: #3CAC5A !important;
+    border: 2px solid #FFF !important;
+    padding-left: 0em;
+    padding-right: 3em;
+    padding-bottom: 1em;
+    margin-left: 2em;
+    width: 80%;
+    display: block;
+    height: 1.5em;
+    margin-bottom: 2em;
 }
-.call-text
-{
-position: relative;
-top: 26%;
+.call-text {
+    position: relative;
+    top: 26%;
 }
-.call-icon
-{
-	float: right;
-top: 1em;
-position: relative;
+.call-icon {
+    float: right;
+    top: 1em;
+    position: relative;
 }
-.nav-bar-style
-{
-	border-style: solid;
-border-color: white;
-height: 4em;
+.nav-bar-style {
+    border-style: solid;
+    border-color: white;
+    height: 4em;
 }
-
-.navbar-text-style
-{
-font-size: 1em;
-position: relative;
-top: -28%;
-font-style: normal !important;
-border-radius: 0px !important;
+.navbar-text-style {
+    font-size: 1em;
+    position: relative;
+    top: -28%;
+    font-style: normal !important;
+    border-radius: 0px !important;
 }
-.mid-text
-{
-	 text-align: right;
-	padding-right: 3em;
+.mid-text {
+    text-align: right;
+    padding-right: 3em;
 }
-.collapsible-text
-{
-	float: right;
+.collapsible-text {
+    float: right;
 }
-.gallery-images
-{
-	height:10em;
-	width: 80%;
-	padding-top: 1.2em;
-	margin-left: auto;
+.gallery-images {
+    height: 10em;
+    width: 80%;
+    padding-top: 1.2em;
+    margin-left: auto;
     margin-right: auto;
     display: block;
 }
-.photographer-video-css
-{
-padding-bottom: 1em;
+.photographer-video-css {
+    padding-bottom: 1em;
 }
-.display-call
-{
-	display: none !important;
+.display-call {
+    display: none !important;
 }
 /**.top-header
 {
