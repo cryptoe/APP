@@ -16,13 +16,15 @@
 .ui-selectmenu.ui-dialog .ui-header {
     border-bottom-width: 1px;
 }
-#selectField div {display:inline-block;}
+#selectField div {
+    display: inline-block;
+}
 .ui-controlgroup-controls {
-float: left;
-width: 100% !important  ;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
+    float: left;
+    width: 100% !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 /*
 #selectField {text-align:center;
@@ -47,19 +49,19 @@ box-sizing: border-box;
     color :  #3B5998;
      background : white !important;
 } */
-.li
-{
-   background : #252525 !important; 
+
+.li {
+    background: #252525 !important;
 }
-#regionWindow-popup,#subCategoryWindow-popup{
-    left: 10px !important ;
-    right: 10px !important;   
+#regionWindow-popup, #subCategoryWindow-popup {
+    left: 10px !important;
+    right: 10px !important;
 }
-.iconLeft a{
+.iconLeft a {
     padding-left: 2.5em !important;
     padding-right: 1em !important;
 }
-.iconLeft a:after{
+.iconLeft a:after {
     right: auto;
     left: 9px;
 }
@@ -75,31 +77,37 @@ box-sizing: border-box;
 
    padding :0px !important;
 }
-#segment .ui-link{
-    border: 1px solid  #AD3C42 !important;
+#segment .ui-link {
+    border: 1px solid #AD3C42 !important;
     color: #AD3C42;
+    text-shadow: 1px 1px 1px #AD3C42 !important;
 }
-#segment .ui-btn-active{
+#segment .ui-btn-active, #photographer-info-nav-bar .ui-btn-active {
     background-color: #AD3C42 !important;
-     color:#FFFFFF;
-     border-color: #AD3C42 !important;
-    text-shadow:#AD3C42 !important;
+    color: #FFFFFF;
+    border-color: #AD3C42 !important;
+    text-shadow: #AD3C42 !important;
 }
-#footer .ui-btn-active{
+.navbar-bg {
+    background-color: #2E2E2E !important;
+}
+#footer .ui-btn-active {
     background-color: #AD3C42 !important;
     border-color: #AD3C42 !important;
-     color:#FFFFFF;
-    text-shadow:#AD3C42 !important;
+    color: #FFFFFF;
+    text-shadow: #AD3C42 !important;
 }
-.list
-{
+.list {
     position: relative;
     padding-right: 10px;
+}
+.content-class {
+    padding: 0px;
+    background-color: #353535;
 }
 .ui-input-search input{
     text-align: right;
 }
 .ui-input-search:after{
-
    left: 93%;
 }
