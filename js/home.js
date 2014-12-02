@@ -62,27 +62,27 @@ $(document).ready(function() {
                 //var surname = $contactform.find('input[name="surname"]').val();
             var address = $('#address').val();
             var mobilephone = $('#mobilephone').val();
-            //var email = $contactform.find('input[name="email"]').val();	
+            //var email = $contactform.find('input[name="email"]').val();   
             var message = $('#message').val();
 
             var body = "First Name : " + firstname + "\n Address : " + address + "\n Contact No. : " + mobilephone + "\n Message : \n" + message;
             alert(body);
             window.open("mailto:amit.stiffy90@gmail.com?subject=The%20subject%20of%20the%20email&body=" + body + "");
             //submit the form
-            /*	$.ajax({
-			type: "GET",
-			url: url,
-			data: {firstname:firstname, surname:surname, state: state, mobilephone: mobilephone, email: email, message: message},
+            /*  $.ajax({
+            type: "GET",
+            url: url,
+            data: {firstname:firstname, surname:surname, state: state, mobilephone: mobilephone, email: email, message: message},
             success: function (data) {
-				if (data == 'success') {
-					// show thank you 
-					$contactpage.find('.contact-thankyou').show();
-					$contactpage.find('.contact-form').hide();
-				}  else {
-					alert('Unable to send your message. Please try again.');
-				}
-			}
-		}); */
+                if (data == 'success') {
+                    // show thank you 
+                    $contactpage.find('.contact-thankyou').show();
+                    $contactpage.find('.contact-form').hide();
+                }  else {
+                    alert('Unable to send your message. Please try again.');
+                }
+            }
+        }); */
 
         }
         return false;
@@ -99,11 +99,11 @@ $(document).ready(function() {
                 $('#subCategory').append($("<li id=" + id + " class=\"iconLeft\">").append("<a href=\"javascript:subCategoryClicked('" + name + "')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-l\">" + name + "</a>"));
             }
             /*else if(catID == 1)
-			{
-				var name = subCategoryData[i]['name'];
-				var id = subCategoryData[i]['id'];
-				$('#subCategory').append($("<li id="+id+">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"+name+"</a>"));
-			}*/
+            {
+                var name = subCategoryData[i]['name'];
+                var id = subCategoryData[i]['id'];
+                $('#subCategory').append($("<li id="+id+">").append("<a href=\"javascript:subCategoryClicked('"+name+"')\" data-rel=\"dialog\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"+name+"</a>"));
+            }*/
         }
         var ni = document.getElementById("regionBtn");
         ni.innerHTML = "Region";
@@ -188,11 +188,11 @@ $(document).ready(function() {
         }
 
     });
-    //	$('.header-join-wrapper').on('click', function(){
-    //		openFB.init({appId:716728658405527,tokenStore:window.localStorage});
-    ////		openFB.init('YOUR_FB_APP_ID', 'http://localhost/openfb/oauthcallback.html', window.localStorage);
-    //		openFB.login();
-    //	});
+    //  $('.header-join-wrapper').on('click', function(){
+    //      openFB.init({appId:716728658405527,tokenStore:window.localStorage});
+    ////        openFB.init('YOUR_FB_APP_ID', 'http://localhost/openfb/oauthcallback.html', window.localStorage);
+    //      openFB.login();
+    //  });
 
 });
 
@@ -269,22 +269,22 @@ function addElement(divId, divString) {
     ni.innerHTML = divString;
 }
 
-function setPhotographerID(id)
-{
-	alert(id);
-	$.ajax({
-  type: "GET",
-  url: "http://wedup.net/mobileapp/clientDetAll.php?id="+id,
-  dataType: "script"
-	});
+function setPhotographerID(id) {
+    alert(id);
+    $.ajax({
+        type: "GET",
+        url: "http://wedup.net/mobileapp/clientDetAll.php?id=" + id,
+        dataType: "script"
+    });
 
 }
-function clientDetails(dataJson,other)
-{
-	console.log(dataJson);
-	return true;
+
+function clientDetails(dataJson, other) {
+    console.log(dataJson);
+    return true;
 
 }
+
 function setClientsDet(data, regionJson, subCategoryJson) {
     var divElement = "";
     for (var i = 0; i < subCategoryJson.length; i++) {
@@ -299,7 +299,7 @@ function setClientsDet(data, regionJson, subCategoryJson) {
                     var logo = data[i]['logo'];
                     var phone = data[i]['phone'];
                     var address = data[i]['address'];
-                    divElement = divElement + " <li id=" + id + " style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' onclick=\"javascript:setPhotographerID("+id+")\" class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">" + name + "</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">" + address + "</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">" + phone + "</h2></div></a></li>";
+                    divElement = divElement + " <li id=" + id + " style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' onclick=\"javascript:setPhotographerID(" + id + ")\" class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">" + name + "</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">" + address + "</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">" + phone + "</h2></div></a></li>";
 
                 }
             }

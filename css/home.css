@@ -65,17 +65,16 @@
     right: auto;
     left: 9px;
 }
-.iconright ul{
+.iconright ul {
     padding-right: 2.5em !important;
     padding-left: 1em !important;
 }
-.iconright ul:after{
+.iconright ul:after {
     left: auto;
     right: 9px;
 }
 #photographersList > li > a {
-
-   padding :0px !important;
+    padding: 0px !important;
 }
 #segment .ui-link {
     border: 1px solid #AD3C42 !important;
@@ -105,9 +104,9 @@
     padding: 0px;
     background-color: #353535;
 }
-.ui-input-search input{
+.ui-input-search input {
     text-align: right;
 }
-.ui-input-search:after{
-   left: 93%;
+.ui-input-search:after {
+    left: 93%;
 }

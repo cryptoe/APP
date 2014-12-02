@@ -38,13 +38,13 @@
     vertical-align: middle;
 }
 .photographer-call {
- background-color: #3CAC5A !important;
-border: 2px solid #FFF !important;
-padding-left: 1%;
-padding-right: 0%;
-padding-bottom: 1em;
-width: 80%;
-display: block;
+    background-color: #3CAC5A !important;
+    border: 2px solid #FFF !important;
+    padding-left: 1%;
+    padding-right: 0%;
+    padding-bottom: 1em;
+    width: 80%;
+    display: block;
 }
 .call-text {
     position: relative;
@@ -85,13 +85,13 @@ display: block;
 .photographer-video-css {
     padding-bottom: 1em;
     width: 8em;
-	height: 8em;
+    height: 8em;
 }
-.display-call {	
+.display-call {
     display: none !important;
 }
 /**.top-header
 {
-	height: 0px;
+    height: 0px;
 }
 **/
