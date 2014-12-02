@@ -16,7 +16,10 @@ function subCategoryClicked(val) {
     $("#subCategoryWindow").popup("close");
 }
 
+
 $(document).ready(function() {
+
+
 
     $("#region").change(function() {
 
@@ -153,7 +156,7 @@ $(document).ready(function() {
         $("#photogallery-div").removeClass("display-call");
     });
 
-    $("#about").on("click", function() {
+    $("#about1").on("click", function() {
         $("#video-gallery-1").removeClass("display-call");
         $("#video-gallery-1").addClass("display-call");
         $("#photographer-info-slide").removeClass("display-call");
@@ -266,6 +269,22 @@ function addElement(divId, divString) {
     ni.innerHTML = divString;
 }
 
+function setPhotographerID(id)
+{
+	alert(id);
+	$.ajax({
+  type: "GET",
+  url: "http://wedup.net/mobileapp/clientDetAll.php?id="+id,
+  dataType: "script"
+	});
+
+}
+function clientDetails(dataJson,other)
+{
+	console.log(dataJson);
+	return true;
+
+}
 function setClientsDet(data, regionJson, subCategoryJson) {
     var divElement = "";
     for (var i = 0; i < subCategoryJson.length; i++) {
@@ -280,7 +299,7 @@ function setClientsDet(data, regionJson, subCategoryJson) {
                     var logo = data[i]['logo'];
                     var phone = data[i]['phone'];
                     var address = data[i]['address'];
-                    divElement = divElement + " <li id=" + id + " style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">" + name + "</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">" + address + "</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">" + phone + "</h2></div></a></li>";
+                    divElement = divElement + " <li id=" + id + " style=\"padding-left:15px;padding-right:15px;padding-bottom:5px;\" class=\"iconLeft\" data-icon=\"\"><a href='#about' onclick=\"javascript:setPhotographerID("+id+")\" class=\"ui-btn ui-btn-icon-right ui-nodisc-icon ui-icon-carat-l\"style=\"background: #222528;\"><div style=\"display: inline-block; float: right\"><img src=\'" + logo + "\' style=\"width:90px;height:90px\"/></div><div align=\"right\"style=\"display: inline-block; float: right; padding-right: 10px;font-weight: 100;color:#EAEAEA\">" + name + "</br>&nbsp;<h2 align=\"right\" style=\"color: #7F7F7F;font-size: small;\">" + address + "</h2><h2 align=\"right\" style=\"color:#C0C0C0;font-size: small;\">" + phone + "</h2></div></a></li>";
 
                 }
             }
