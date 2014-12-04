@@ -270,17 +270,34 @@ function addElement(divId, divString) {
 }
 
 function setPhotographerID(id) {
+    $("#about").addClass("display-call");
     alert(id);
     $.ajax({
         type: "GET",
         url: "http://wedup.net/mobileapp/clientDetAll.php?id=" + id,
-        dataType: "script"
+        dataType: "script",
+        async: false
     });
 
 }
 
 function clientDetails(dataJson, other) {
     console.log(dataJson);
+    console.log(dataJson['name']);
+    $("#topName").text(dataJson['name']);
+    $("#circle_name").text(dataJson['name']);
+    $("#address_circle").text(dataJson['address']);
+    $("#left1").text(dataJson['name']);
+    $("#left2").text(dataJson['address']);
+    $("#CALL_ME_NAV_BAR").attr("href",dataJson['phone']);
+    $("#MESSAGE_NAV_BAR").attr("href",dataJson['phone']);
+    $("#logo_image").attr("src",dataJson['logo']);
+    $("#phtotographer_info_text").text("234234234");
+    $("#call_photographer_info").attr("href",dataJson['phone']);
+    $("#backdrop").attr("style","background: url("+dataJson['coverImage']+") no-repeat;");
+    $("#about").removeClass("display-call");   
+
+
     return true;
 
 }

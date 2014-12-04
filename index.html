@@ -77,8 +77,8 @@
         <div data-role="header" data-position="fixed">
             <div data-role="header" class="photographer-header top-header">
                 <a href="index.html" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true" class="ui-link ui-btn ui-btn-b ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline ui-shadow ui-corner-all" role="button">My button</a>
-                <p class="allign-middle"> Page Title </p>
-                <a href="index.html" style="float:right;padding: 0px 0px !important;background-color: #111 !important;">
+                <p id ="topName" class="allign-middle"> Page Title </p>
+                <a href="index.html" id="call_photographer_info" style="float:right;padding: 0px 0px !important;background-color: rgba(0, 0, 0, 0)!important;">
                     <img src="img/call.png" style="padding: 0px 0px !important;
 width: 89px;
 margin-top: 11px;
@@ -86,16 +86,16 @@ background-color: #111 !important;">
                 </a>
             </div>
         </div>
-        <div class="photographer-head">
-            <div style="height:30%">
+        <div id="backdrop" class="photographer-head">
+            <div style="height:41%">
             </div>
             <div class="photographer-circle-black">
-                <p class="photographer-circle-text allign-middle">
+                <p id="circle_name"class="photographer-circle-text allign-middle">
                     123123
                 </p>
             </div>
             <div class="allign-middle">
-                <span>
+                <span id ="address_circle">
              123eqweqweq</span>
             </div>
 
@@ -119,39 +119,39 @@ GALLERIES</a>
         <div id="main-content" data-role="content">
             <div id="photographer-info-slide">
                 <div class="mid-text">
-                    <span style="font-size: .5em;">
+                    <!--<span id="left3" style="font-size: .5em;">
             name
-        </span>
-                    <span style="font-size: 1em;">
+        </span>-->
+                    <span id="left2" style="font-size: .7em;">
             age
         </span>
-                    <span style="font-size: 2em;">
+                    <span id="left1" style="font-size: 1.4em;">
             sex
         </span>
                 </div>
                 <div class="ui-grid-b" style="height: 8em">
                     <div class="ui-block-a" style="width:65%">
                         <div>
-                            <a href="#" class="ui-btn ui-icon-phone ui-btn-icon-right photographer-call"><span class="call-text">CALL ME</span></a>
+                            <a id="CALL_ME_NAV_BAR" href="#" class="ui-btn ui-icon-phone ui-btn-icon-right photographer-call"><span class="call-text">CALL ME</span></a>
                         </div>
                         <div>
-                            <a href="#" class="ui-btn ui-icon-mail ui-btn-icon-right photographer-call" style="background-color: #1C8EEF !important; ">
+                            <a id="MESSAGE_NAV_BAR" href="#" class="ui-btn ui-icon-mail ui-btn-icon-right photographer-call" style="background-color: #1C8EEF !important; ">
                                 <span class="call-text">MESSAGE</span>
                             </a>
                         </div>
                     </div>
                     <div class="ui-block-b" data-theme="b" sytle="width:30%">
-                        <img src="img/photograper.png" style="height:7.8em;width:89%" />
+                        <img id="logo_image" src="img/photograper.png" style="height:7.8em;width:89%" />
                     </div>
                 </div>
                 <br/>
 
                 <div data-theme="b">
-                    <div style="
+                    <div id="phtotographer_info_text" style="
     border:1px solid white;
     margin:2px;
 ">
-                        madarchoddadasd adsasdas dasdasd asdasdas dfasdasdas dasdasd dasdas
+                         adsasdas dasdasd asdasdas dfasdasdas dasdasd dasdas
                     </div>
                     <br/>
                 </div>
